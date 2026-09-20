@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Pluѕ Carе LА – Physicаl Therаpy & Home Health | Physical Therapy Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0B3C43;
+      --primary-light: #13555E;
+      --accent: #E0A96D;
+      --bg-light: #F8FAFC;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* SEO Link Styling */
+    a.seo-link {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      font-weight: 700;
+      transition: all 0.2s ease-in-out;
+    }
+
+    a.seo-link:hover {
+      color: var(--accent);
+      text-decoration-color: var(--primary);
+    }
+
+    header {
+      background-color: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .btn-call {
+      background-color: var(--accent);
+      color: var(--primary);
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .btn-call:hover {
+      opacity: 0.9;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #E2E8F0;
+      margin-bottom: 2rem;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: var(--primary);
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--white);
+      color: var(--white);
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+    }
+
+    .about-text strong {
+      color: var(--primary);
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .about-list li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .about-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--primary);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Why Choose Us */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .why-box {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--accent);
+    }
+
+    .why-box h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* FAQs Section */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      margin-bottom: 1rem;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .faq-item h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item p {
+      color: var(--text-muted);
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    .contact-info ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .contact-info li {
+      margin-bottom: 1rem;
+      color: var(--text-muted);
+    }
+
+    .contact-info strong {
+      color: var(--primary);
+    }
+
+    .contact-info a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Keywords Section */
+    .keywords-section {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .keywords-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .tag a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .tag a:hover {
+      color: var(--accent);
+    }
+
+    footer {
+      background: #062328;
+      color: var(--white);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="http://www.apluscarela.com/" class="logo">A Plus Care <span>LA</span></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="tel:3239185505" class="btn-call">Call 323-918-5505</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Top-Rated Premier <a href="http://www.apluscarela.com/" class="seo-link" style="color: var(--accent);">physical therapy clinic</a> in Los Angeles</h1>
+      <p>Personalized physical therapy & home health services designed to restore your mobility, relieve pain, and enhance your quality of life.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-primary">Our Services</a>
+        <a href="#contact" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p><strong>A Pluѕ Carе LА – Physicаl Therаpy & Homе Hеalth</strong> is a trusted and full-service <a href="http://www.apluscarela.com/" class="seo-link">physical therapy clinic</a> dedicated to providing comprehensive rehabilitation and personalized medical care across Los Angeles, CA.</p>
+        <p>Whether you need in-clinic treatment or targeted care in the comfort of your home, our highly experienced team works closely with a qualified <a href="http://www.apluscarela.com/" class="seo-link">physical therapist</a> to create customized recovery plans.</p>
+        <ul class="about-list">
+          <li>Licensed practitioners including the <a href="http://www.apluscarela.com/" class="seo-link">best physical therapist</a> team in town</li>
+          <li>Comprehensive <a href="http://www.apluscarela.com/" class="seo-link">arthritis physical therapy</a> and rehabilitation programs</li>
+          <li>An <a href="http://www.apluscarela.com/" class="seo-link">affordable physical therapist</a> solution tailored to your financial needs</li>
+        </ul>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.0146930505257!2d-118.467617!3d34.0434942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb092ed32adf%3A0x3e861a8e4d116f4c!2zQSBQbHXRlSBDYXLQtSBM0JAg4oCTIFBoeXNpY9CwbCBUaGVy0LBweSAmIEhvbdC1IEjQtWFsdGg!5e0!3m2!1sen!2s!4v1789914584277!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <h3><a href="http://www.apluscarela.com/" class="seo-link">physical therapy clinic</a> Services</h3>
+        <p>Advanced in-clinic evaluation and therapy programs designed to treat acute pain, sports injuries, and post-surgical rehabilitation.</p>
+      </div>
+      <div class="card">
+        <h3><a href="http://www.apluscarela.com/" class="seo-link">Arthritis Physical Therapy</a></h3>
+        <p>Specialized physical therapy techniques aimed at reducing joint stiffness, managing chronic pain, and improving overall joint mobility.</p>
+      </div>
+      <div class="card">
+        <h3>Home Health Physical Therapy</h3>
+        <p>Convenient home health physical therapy bringing expert treatment directly to patients who prefer or require in-home support.</p>
+      </div>
+      <div class="card">
+        <h3>Post-Surgical Rehabilitation</h3>
+        <p>Targeted rehabilitation programs designed to help patients safely rebuild strength and flexibility following major surgeries.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why">
+    <h2 class="section-title">Why Choose A Pluѕ Carе LА – Physicаl Therаpy & Homе Hеalth?</h2>
+    <div class="why-grid">
+      <div class="why-box">
+        <h4>Expert <a href="http://www.apluscarela.com/" class="seo-link">Physical Therapist</a> Team</h4>
+        <p>Work with qualified, empathetic therapists committed to delivering measurable recovery outcomes.</p>
+      </div>
+      <div class="why-box">
+        <h4><a href="http://www.apluscarela.com/" class="seo-link">Affordable Physical Therapist</a> Care</h4>
+        <p>We provide top-quality physical therapy treatments at competitive, affordable rates without compromising on quality.</p>
+      </div>
+      <div class="why-box">
+        <h4>Leading Local <a href="http://www.apluscarela.com/" class="seo-link">physical therapy clinic</a></h4>
+        <p>Every therapy plan is structured around your specific medical history, lifestyle, and rehabilitation goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h4>1. What makes your <a href="http://www.apluscarela.com/" class="seo-link">physical therapy clinic</a> stand out in Los Angeles?</h4>
+        <p>We offer highly specialized in-clinic therapy, personalized home health care, <a href="http://www.apluscarela.com/" class="seo-link">arthritis physical therapy</a>, and post-surgical rehabilitation tailored specifically to individual patient goals.</p>
+      </div>
+      <div class="faq-item">
+        <h4>2. How do I find the <a href="http://www.apluscarela.com/" class="seo-link">best physical therapist</a> for my condition?</h4>
+        <p>Our experienced team connects you with a dedicated <a href="http://www.apluscarela.com/" class="seo-link">physical therapist</a> who will evaluate your injury or chronic pain during the initial consultation to create an optimal treatment plan.</p>
+      </div>
+      <div class="faq-item">
+        <h4>3. Do you offer <a href="http://www.apluscarela.com/" class="seo-link">affordable physical therapist</a> options?</h4>
+        <p>Yes, we prioritize transparent pricing and structured treatment packages to deliver high-quality, accessible rehabilitation without financial stress.</p>
+      </div>
+      <div class="faq-item">
+        <h4>4. Can physical therapy help with severe joint stiffness and arthritis?</h4>
+        <p>Yes, targeted <a href="http://www.apluscarela.com/" class="seo-link">arthritis physical therapy</a> reduces joint inflammation, improves mobility, and strengthens surrounding muscles to ease daily discomfort.</p>
+      </div>
+      <div class="faq-item">
+        <h4>5. Do you offer home health services along with in-clinic care?</h4>
+        <p>Yes, as a full-service <a href="http://www.apluscarela.com/" class="seo-link">physical therapy clinic</a>, we deliver professional home health therapy directly to your doorstep in Los Angeles for maximum recovery convenience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Contact Information</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Business Name:</strong> A Pluѕ Carе LА – Physicаl Therаpy & Homе Hеalth</p>
+        <ul>
+          <li><strong>Address:</strong> 12100 Wilshire Blvd Ste 874, Los Angeles, CA 90025</li>
+          <li><strong>Phone:</strong> <a href="tel:3239185505">323-918-5505</a></li>
+          <li><strong>Website URL:</strong> <a href="http://www.apluscarela.com/" target="_blank" rel="noopener" class="seo-link">http://www.apluscarela.com/</a></li>
+        </ul>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.0146930505257!2d-118.467617!3d34.0434942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb092ed32adf%3A0x3e861a8e4d116f4c!2zQSBQbHXRlSBDYXLQtSBM0JAg4oCTIFBoeXNpY9CwbCBUaGVy0LBweSAmIEhvbdC1IEjQtWFsdGg!5e0!3m2!1sen!2s!4v1789914584277!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Keywords -->
+  <div class="keywords-section">
+    <h3>Related Searches</h3>
+    <div class="keywords-tags">
+      <span class="tag"><a href="http://www.apluscarela.com/">physical therapy clinic</a></span>
+      <span class="tag"><a href="http://www.apluscarela.com/">Physical Therapist</a></span>
+      <span class="tag"><a href="http://www.apluscarela.com/">Best Physical Therapist</a></span>
+      <span class="tag"><a href="http://www.apluscarela.com/">Affordable Physical Therapist</a></span>
+      <span class="tag"><a href="http://www.apluscarela.com/">Arthritis Physical Therapy</a></span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 A Pluѕ Carе LА – Physicаl Therаpy & Homе Hеalth. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
